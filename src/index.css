@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body,html{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFA462;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.head{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+form{
+  display: flex;
+  gap: 20px;
+}
+
+.task-sec{
+  width: 28%;
+}
+
+.task-input{
+  width: 100%;
+  height: 17px;
+  border-radius: 5px;
+  background-color: #FF5A64;
+  padding: 10px;
+  border: none;
+}
+
+.task-input:focus{
+  outline: none;
+}
+
+.add-btn{
+  width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #FF3C3C;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.todo-check{
+  display: flex;
+  gap: 10px;
+}
+
+.list{
+  margin-top: 30px;
+}
+
+.list-main{
+  width: 94%;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #DE2E43;
+}
+
+.delete-todo{
+  cursor: pointer;
+}
+
+.task-complete{
+  width: 94%;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  font-weight: 600;
+  background-color: #BD9A9E;
+}
+
+@media only screen and (max-width: 600px) {
+  .task-sec{
+    width: 80%;
+  }
+}
