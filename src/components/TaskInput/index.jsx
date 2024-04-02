@@ -3,8 +3,9 @@ import {useForm} from 'react-hook-form'
 import TaskList from '../TaskList'
 
 const getLocalStorage = () => {
+
+    //Retrieving task from the Local Storage
     const todos = JSON.parse(localStorage.getItem("tasks"))
-  
     if(todos && todos.length > 0){
       return todos
     }
@@ -16,16 +17,18 @@ const TaskInput = () => {
     const [allTask, setAllTask] = useState(getLocalStorage())
     const {register, handleSubmit} = useForm()
 
+    // Submitting Input
     const onSubmit = (data, e) => {
         e.preventDefault()
         setTask(data.task)
     }
     
+    // Adding the Tasks
     useEffect(() => {
-        if(task !== '') setAllTask(prev => [{id: Date.now(), todo: task, completed: false}, ...prev])
+        if(task !== '') setAllTask(prev =>  [{id: Date.now(), todo: task, completed: false}, ...prev])
     }, [task])
-    console.log(allTask);
 
+    //Setting the task in the Local Storage
     useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(allTask))
       }, [allTask])
@@ -41,6 +44,7 @@ const TaskInput = () => {
         <button className='add-btn' type='submit'>ADD</button>
         </form>
 
+        {/* Displaying the list of tasks */}
         <section className='list'>
             {allTask.map(task => (
                 <TaskList

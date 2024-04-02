@@ -1,8 +1,11 @@
-# React + Vite
+## QuadTech Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Assignment of a Todo list with simple operations like adding task, deleting and also saving it to the local storage
 
-Currently, two official plugins are available:
+## Quickstart
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Fork the project
+2. Clone project using `git clone git@github.com:<YOUR-USERNAME>/quadTech.git`
+3. Navigate into the project using `cd quadTech`
+4. Install dependencies `npm install`
+5. Run `npm run dev`
