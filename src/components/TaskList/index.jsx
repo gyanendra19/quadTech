@@ -2,15 +2,16 @@ import React from 'react'
 
 const TaskList = ({task, allTask, setAllTask}) => {
 
+    //Deleting the task
     const deleteTodo = (id) => {
         setAllTask(prev => prev.filter(prevTodo => prevTodo.id !== id))
     }
 
+    // Toggle of completion of task
     const toggleComplete = (id) => {
         setAllTask(prev => prev.map(prevTodo => prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo))
     }
 
-    console.log(allTask);
   return (
     <section className={`${task.completed ? 'task-complete' : 'list-main'}`}>
         <div className='todo-check'>
